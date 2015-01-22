@@ -1,7 +1,11 @@
 {
   "name": "angular-mailchimp",
   "main": "angular-mailchimp.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/BeardandFedora/angular-mailchimp"
+    },
   "authors": {
     "name": "Keith Hall",
     "web": "http://keith.io"
