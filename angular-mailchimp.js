@@ -24,13 +24,14 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
       url = '//' + mailchimp.username + '.' + mailchimp.dc +
             '.list-manage.com/subscribe/post-json';
 
-      var fields = Object.keys(mailchimp);
-
-      for(var i = 0; i < fields.length; i++) {
-        params[fields[i]] = mailchimp[fields[i]];
-      }
-
-      params.c = 'JSON_CALLBACK';
+            params = {
+                'EMAIL': mailchimp.email,
+                'FNAME': mailchimp.fname,
+                'LNAME': mailchimp.lname,
+                'c': 'JSON_CALLBACK',
+                'u': mailchimp.u,
+                'id': mailchimp.id
+           };      
       
       actions = {
         'save': {
