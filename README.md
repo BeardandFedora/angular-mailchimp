@@ -71,12 +71,16 @@ those you obtained:
 
   <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
   <div ng-show="mailchimp.result === 'error'" ng-cloak>
-    <span ng-bind-html="mailchimp.errorMessage"></span>
+    <alert type="danger" close="closeAlert(mailchimp)" role="alert">
+      <span ng-bind-html="mailchimp.errorMessage"></span>
+    </alert>
   </div>
 
   <!-- Show success message if MailChimp returned successfully. -->
   <div ng-show="mailchimp.result === 'success'" ng-cloak>
-    <span ng-bind-html="mailchimp.successMessage"></span>
+    <alert type="success" close="closeAlert(mailchimp)" role="alert">
+      <span ng-bind-html="mailchimp.successMessage"></span>
+    </alert>
   </div>
 </form>
 ```
