@@ -56,6 +56,8 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
                     // MailChimp returns a success.
                     else if(response.result === 'success') {
                         mailchimp.successMessage = response.msg;
+                        $location.path('/we/love-you');
+                        $rootScope.$apply();
                     }
                 },
                 // Error sending data to MailChimp
