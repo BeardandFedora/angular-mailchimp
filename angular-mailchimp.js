@@ -8,8 +8,8 @@ angular.module('mailchimp', ['ng', 'ngResource', 'ngSanitize'])
 /**
  * Form controller for a new Mailchimp subscription.
  */
-.controller('MailchimpSubscriptionCtrl', ['$log', '$resource', '$scope', '$location',
-    function($log, $resource, $scope) {
+.controller('MailchimpSubscriptionCtrl', ['$log', '$resource', '$scope', '$location', '$rootScope'
+    function($log, $resource, $scope, $location, $rootScope) {
         // Handle clicks on the form submission.
         $scope.addSubscription = function(mailchimp) {
             var actions,
